@@ -4,5 +4,6 @@ click
 colorama
 scikit_learn
 scipy
+textblob
 flake8
 yapf
