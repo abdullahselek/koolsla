@@ -13,4 +13,13 @@ class TfIdfTest(unittest.TestCase):
 
     def test_train_engine(self):
         food_dataset = data.import_data(data.food_dataset_path)
-        self.assertEqual(len(food_dataset), 424509)
+        split_data = data.split_data(food_dataset)
+        tfidf_matrix = tfidf.train_engine(split_data['food_names'])
+        self.assertIsNotNone(tfidf_matrix)
+
+    def test_find_similarities(self):
+        food_dataset = data.import_data(data.food_dataset_path)
+        split_data = data.split_data(food_dataset)
+        tfidf_matrix = tfidf.train_engine(split_data['food_names'])
+        similar_dishes = tfidf.find_similarities(247, 5, tfidf_matrix)
+        self.assertIsNotNone(similar_dishes)

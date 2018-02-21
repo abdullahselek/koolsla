@@ -5,28 +5,25 @@ import time
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
+from numpy import argmax
+
+# Initializing tf-idf vectorizer
+tdidf = TfidfVectorizer(
+            min_df=3,
+            max_df=0.9,
+            ngram_range=(1, 2),
+            stop_words='english')
 
 def train_engine(plots, min_df=3):
-    # Initializing tf-idf vectorizer
-    vectorizer = TfidfVectorizer(
-        min_df=min_df,
-        max_df=0.9,
-        ngram_range=(1, 2),
-        stop_words='english')
+    tdidf.min_df = min_df
     # Fit and transform corpus
-    plots_tfidf = vectorizer.fit_transform(plots)
+    tfidf_matrix = tdidf.fit_transform(plots)
     # Pack and return the results
-    return plots_tfidf
+    return tfidf_matrix
 
-def find_similarities(name, recommendations, plots_tfidf):
+def find_similarities(dish_id, recommendation_count, tfidf_matrix):
     # Generate similarities
-    similarities = linear_kernel(plots_tfidf, plots_tfidf)
-    # Get similarity scores for the food
-    scores = list(enumerate(similarities[name]))
-    # Sort into descending order the scores
-    sorted_scores = sorted(scores, key=lambda x: x[1], reverse=True)
-    # Get the number of the recommendations asked
-    food_recommendations = sorted_scores[1:recommendations + 1]
-    # Get the indices of the recommendation food
-    food_indices = [i[1] for i in food_recommendations]
-    return food_indices
+    cosine_similarities = linear_kernel(tfidf_matrix[0:1], tfidf_matrix).flatten()
+    # Find related dishes with recommendation count
+    related_dish_indices = cosine_similarities.argsort()[:-recommendation_count:-1]
+    return related_dish_indices
