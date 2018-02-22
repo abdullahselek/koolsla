@@ -42,9 +42,10 @@ setup(
     keywords='machine learning, food suggestion, tf-idf',
     classifiers=[
         'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Topic :: Software Development :: Scientific/Engineering :: Python Modules',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
