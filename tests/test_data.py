@@ -13,3 +13,8 @@ class DataTest(unittest.TestCase):
         dish_dataset = data.import_data(data.dish_dataset_path)
         split_data = data.split_data(dish_dataset)
         self.assertIsNotNone(split_data)
+
+    def test_validate_dish_id(self):
+        self.assertFalse(data.validate_dish_id(-1))
+        self.assertFalse(data.validate_dish_id(424512))
+        self.assertTrue(data.validate_dish_id(100))

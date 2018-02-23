@@ -21,3 +21,10 @@ def split_data(dish_dataset):
     dish_names = dish_dataset[['name']].values.flatten().tolist()
     # Pack and return the split data
     return {'dish_names': dish_names}
+
+def validate_dish_id(dish_id):
+    # Check whether the id is valid
+    if not (isinstance(dish_id, int) and dish_id >= 0 and dish_id <= 424511):
+        print('Input is not a valid integer between [0, 424511]')
+        return False
+    return True
