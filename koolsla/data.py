@@ -29,18 +29,3 @@ def validate_dish_id(dish_id):
         print('Input is not a valid integer between [0, 424508]')
         return False
     return True
-
-def __modify(dataset_path):
-    with open(dataset_path) as inf, open(dataset_path + '_temp', 'w') as outf:
-        reader = csv.reader(inf, delimiter=',', quotechar='"')
-        writer = csv.writer(outf, delimiter=',', quotechar='"')
-        index = 0
-        for line in reader:
-            if line[0] == 'id':
-                writer.writerow((line[0], line[1]))
-            else:
-                line[0] = index
-                writer.writerow((line[0], line[1]))
-                index += 1
-    os.remove(dataset_path)
-    os.rename(dataset_path + '_temp', dataset_path)
