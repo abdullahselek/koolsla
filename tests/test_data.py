@@ -16,5 +16,5 @@ class DataTest(unittest.TestCase):
 
     def test_validate_dish_id(self):
         self.assertFalse(data.validate_dish_id(-1))
-        self.assertFalse(data.validate_dish_id(424512))
+        self.assertFalse(data.validate_dish_id(424509))
         self.assertTrue(data.validate_dish_id(100))
