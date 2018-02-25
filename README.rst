@@ -11,4 +11,5 @@ koolsla
 |   :target: https://travis-ci.org/abdullahselek/koolsla                   |    :target: https://ci.appveyor.com/project/abdullahselek/koolsla                  |
 +--------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 
-.. image:: https://github.com/abdullahselek/koolsla/blob/master/resources/logo.png
+.. image:: https://raw.githubusercontent.com/abdullahselek/koolsla/master/resources/logo.png
+    :align: center
