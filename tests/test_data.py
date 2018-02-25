@@ -18,3 +18,8 @@ class DataTest(unittest.TestCase):
         self.assertFalse(data.validate_dish_id(-1))
         self.assertFalse(data.validate_dish_id(424509))
         self.assertTrue(data.validate_dish_id(100))
+
+    def test_validate_max_recommendation(self):
+        self.assertFalse(data.validate_max_recommendation(0))
+        self.assertFalse(data.validate_max_recommendation(31))
+        self.assertTrue(data.validate_max_recommendation(10))
