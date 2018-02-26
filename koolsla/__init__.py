@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-''''''
+'''Food recommendation tool with Machine learning'''
 
 from __future__ import absolute_import
 
@@ -9,6 +9,6 @@ __email__        = 'abdullahselek@gmail.com'
 __copyright__    = 'Copyright (c) 2018 Abdullah Selek'
 __license__      = 'MIT License'
 __version__      = '0.1'
-__url__          = 'https://github.com/abdullahselek/authenticatorpy'
-__download_url__ = 'https://github.com/abdullahselek/authenticatorpy'
-__description__  = ''
+__url__          = 'https://github.com/abdullahselek/koolsla'
+__download_url__ = 'https://github.com/abdullahselek/koolsla'
+__description__  = 'Food recommendation tool with Machine learning'
