@@ -11,7 +11,7 @@ def train_engine(plots):
     Args:
       plots (array): List of dish names.
     Returns:
-      tfidf_matrix (sparse matrix, [n_samples, n_features]): Tf-idf-weighted document-term matrix..
+      tfidf_matrix (sparse matrix, [n_samples, n_features]): Tf-idf-weighted document-term matrix.
     """
 
     # Initializing tf-idf vectorizer
@@ -30,7 +30,7 @@ def train_engine(plots):
 def find_similarities(tfidf_matrix, index, top_n=5):
     """Use to find similarities.
     Args:
-      tfidf_matrix (sparse matrix, [n_samples, n_features]): Tf-idf-weighted document-term matrix..
+      tfidf_matrix (sparse matrix, [n_samples, n_features]): Tf-idf-weighted document-term matrix.
       index (int): Dish id from dataset.
       top_n (int): Max recommendation count, max value 30.
     Returns:
