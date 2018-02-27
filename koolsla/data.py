@@ -14,7 +14,7 @@ parent_directory_path = dirname(__file__)
 dish_dataset_path = join(parent_directory_path,
                           'dataset/dish.csv')
 
-def import_data(dataset_path):
+def import_data(dataset_path=dish_dataset_path):
     """Imports dataset.
     Args:
       dataset_path (str): Path of dataset file.
@@ -28,7 +28,7 @@ def import_data(dataset_path):
 def split_data(dish_dataset):
     """Splits dataset.
     Args:
-      dataset_path (str): Path of dataset file.
+      dish_dataset (dataset values): Dataset.
     Returns:
       names (dictionary): Dish names in a dictionary.
     """
