@@ -36,6 +36,7 @@ setup(
     url=extract_metaitem('url'),
     download_url=extract_metaitem('download_url'),
     packages=find_packages(exclude=('tests', 'docs')),
+    include_package_data=True,
     platforms=['Any'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
