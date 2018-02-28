@@ -11,7 +11,7 @@ def recommend(dish_id, recommendation_count=5):
       dish_id (int): Dish id which koolsla recommends similar ones.
       recommendation_count (int): Max recommendation count given by user.
     Returns:
-      result (int): Success or fail.
+      indice, similarity value (dictionary): Indice & similarity value or None.
     """
 
     is_valid = data.validate_dish_id(dish_id)
@@ -38,5 +38,5 @@ def recommend(dish_id, recommendation_count=5):
                     name=dataset['names'][i],
                     dish_id=i,
                     color=color_print.yellow)
-        return 0
-    return -1
+        return recomended_dishes
+    return None
