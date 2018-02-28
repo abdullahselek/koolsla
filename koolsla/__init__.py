@@ -12,3 +12,10 @@ __version__      = '0.1'
 __url__          = 'https://github.com/abdullahselek/koolsla'
 __download_url__ = 'https://github.com/abdullahselek/koolsla'
 __description__  = 'Food recommendation tool with Machine learning'
+
+from koolsla import (
+    color_print,
+    data,
+    recommender,
+    tfidf
+)
