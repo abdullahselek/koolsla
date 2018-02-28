@@ -39,7 +39,7 @@ setup(
     platforms=['Any'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
-    keywords='machine learning, food suggestion, tf-idf',
+    keywords='machine learning, food suggestion, tf-idf, cosine similarity',
     classifiers=[
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
