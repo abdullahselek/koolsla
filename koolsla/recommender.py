@@ -25,13 +25,13 @@ def recommend(dish_id, recommendation_count=5):
         # Generate recommendations
         recomended_dishes = tfidf.find_similarities(tfidf_matrix, dish_id, recommendation_count)
         # Input dish
-        color_print.print_green('❯ Given Dish')
+        color_print.print_green('Given Dish')
         color_print.print_dish(
                     name=dataset['names'][dish_id],
                     dish_id=dish_id,
                     color=color_print.green)
         # Display the recommended dishes
-        color_print.print_yellow('★ Top ' + str(recommendation_count) + ' Recommendations')
+        color_print.print_yellow('Top ' + str(recommendation_count) + ' Recommendations')
         for i, _ in recomended_dishes:
             color_print.print_green(i)
             color_print.print_dish(
