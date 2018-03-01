@@ -1,14 +1,32 @@
 .. raw:: html
 
-    <embed>
-        <h1 align="center">
-            <img src="resources/logo.png" width="25%"><br/>koolsla
-        </h1>
+   <div align="center">
 
-        <h4 align="center">
-            Food recommendation tool with Machine learning
-        </h4>
-    </embed>
+.. image:: https://raw.githubusercontent.com/abdullahselek/koolsla/master/resources/logo.png
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <h1 align="center">
+
+koolsla
+
+.. raw:: html
+
+   </h1>
+
+.. raw:: html
+
+   <h4 align="center">
+
+Food recommendation tool with Machine learning
+
+.. raw:: html
+
+   </h4>
 
 .. image:: https://codecov.io/gh/abdullahselek/koolsla/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/abdullahselek/koolsla
