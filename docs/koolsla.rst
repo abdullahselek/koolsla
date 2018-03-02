@@ -1,22 +1,15 @@
 Modules Documentation
 =====================
 
-.. automodule:: koolsla.recommender
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-.. automodule:: koolsla.tfidf
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-.. automodule:: koolsla.data
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-.. automodule:: koolsla.color_print
-    :members:
-    :undoc-members:
-    :show-inheritance:
+.. method:: koolsla.recommender.recommend
+.. method:: koolsla.tfidf.find_similarities
+.. method:: koolsla.tfidf.train_engine
+.. method:: koolsla.data.import_data
+.. method:: koolsla.data.split_data
+.. method:: koolsla.data.validate_dish_id
+.. method:: koolsla.data.validate_max_recommendation
+.. method:: koolsla.color_print.print_red
+.. method:: koolsla.color_print.print_green
+.. method:: koolsla.color_print.print_yellow
+.. method:: koolsla.color_print.print_blue
+.. method:: koolsla.color_print.print_dish
