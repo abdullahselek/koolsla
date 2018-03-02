@@ -28,6 +28,12 @@ Food recommendation tool with Machine learning
 
    </h4>
 
+.. image:: https://img.shields.io/pypi/v/koolsla.svg
+    :target: https://pypi.python.org/pypi/koolsla/
+
+.. image:: https://img.shields.io/pypi/pyversions/koolsla.svg
+    :target: https://pypi.org/project/koolsla
+
 .. image:: https://codecov.io/gh/abdullahselek/koolsla/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/abdullahselek/koolsla
 
