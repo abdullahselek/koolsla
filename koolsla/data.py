@@ -6,7 +6,11 @@ import pandas
 import csv, os
 
 from os.path import join, dirname
-from .color_print import print_red
+from .color_print import (
+    print_red,
+    print_dish,
+    yellow
+)
 
 # Parent directory
 parent_directory_path = dirname(__file__)
@@ -68,3 +72,36 @@ def validate_max_recommendation(recommendation_count):
         print_red('Input is not a valid integer between [1, 30]')
         return False
     return True
+
+def validate_length(length):
+    """Validates given length.
+    Args:
+      length (int): Length to display dishes.
+    Returns:
+      is_valid (bool): True / False.
+    """
+
+    # Check whether the list length is valid
+    if (isinstance(length, int) and length >= 1 and length <= 424508):
+        return True
+    print_red('Invalid value for list length: "' + str(length) + '"')
+    print_red('Input is not a valid integer between [1, 424508]')
+    return False
+
+def list_of_dishes(length):
+    """List the dishes with given length.
+    Args:
+      length (int): Length to display dishes.
+    """
+
+    # Check whether the input length is valid
+    if validate_length(length):
+        data = import_data()
+        dataset = split_data(data)
+        # Display the movie list
+        for i in range(length):
+            print_dish(name=dataset['names'][i],
+                      dish_id=i,
+                      color=yellow)
+        return length
+    return 0

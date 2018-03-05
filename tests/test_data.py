@@ -23,3 +23,13 @@ class DataTest(unittest.TestCase):
         self.assertFalse(data.validate_max_recommendation(0))
         self.assertFalse(data.validate_max_recommendation(31))
         self.assertTrue(data.validate_max_recommendation(10))
+
+    def test_validate_length(self):
+        self.assertFalse(data.validate_length(0))
+        self.assertFalse(data.validate_length(424509))
+        self.assertTrue(data.validate_length(100))
+
+    def test_list_of_dishes(self):
+        self.assertEqual(data.list_of_dishes(0), 0)
+        self.assertEqual(data.list_of_dishes(424509), 0)
+        self.assertEqual(data.list_of_dishes(100), 100)
