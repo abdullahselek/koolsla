@@ -1,32 +1,7 @@
-.. raw:: html
+|logo| koolsla
+==============
 
-   <div align="center">
-
-.. image:: https://raw.githubusercontent.com/abdullahselek/koolsla/master/resources/logo.png
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <h1 align="center">
-
-koolsla
-
-.. raw:: html
-
-   </h1>
-
-.. raw:: html
-
-   <h4 align="center">
-
-Food recommendation tool with Machine learning
-
-.. raw:: html
-
-   </h4>
+.. |logo| image:: https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https://raw.githubusercontent.com/abdullahselek/koolsla/master/resources/logo.png&container=focus&resize_w=20&resize_h=20
 
 .. image:: https://img.shields.io/pypi/v/koolsla.svg
     :target: https://pypi.python.org/pypi/koolsla/
