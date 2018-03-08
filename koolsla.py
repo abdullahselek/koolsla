@@ -46,16 +46,19 @@ koolsla_version = __version__
 @click.option(
     '-l', '--list', is_flag=True, default=False, help='List dish titles')
 
-def main(dish_id, recommend, version, help, list):
+def main(dish, recommend, version, help, list):
     if (help):
         print(help_message)
         sys.exit(0)
     else:
         if (version):
-            print('koolsla' + koolsla_version)
+            print('koolsla' +  ' ' + koolsla_version)
         else:
             if (list):
                 listLength = click.prompt('Number of dishes to list', type=int)
                 data.list_of_dishes(length=listLength)
             else:
-                recommender(dish_id=dish_id, recommendation_count=recommend)
+                recommender.recommend(dish_id=dish, recommendation_count=recommend)
+
+if __name__ == '__main__':
+    main()
