@@ -80,3 +80,18 @@ Getting recommendations with dish id and recommendation count::
 
     // Returns dictionary of tuples [(dish_id_1, similarity_ratio1), (dish_id_2, similarity_ratio2), (dish_id_3, similarity_ratio3)]
     recommendatons = recommender.recommend(82, 3)
+
+CLI
+===
+
+After getting the code from https://github.com/abdullahselek/koolsla, run command::
+
+    $ pip install -r requirements.txt
+
+And it's ready to use, there is detailed help menu which you can follow. One of the most used function for recommendation::
+
+    $ python koolsla.py -d 25 --recommend 3
+
+For the help menu::
+
+    $ python koolsla.py --help
