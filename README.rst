@@ -9,6 +9,9 @@
 .. image:: https://img.shields.io/pypi/pyversions/koolsla.svg
     :target: https://pypi.org/project/koolsla
 
+.. image:: https://readthedocs.org/projects/koolsla/badge/?version=latest
+    :target: http://koolsla.readthedocs.org/en/latest/?badge=latest
+
 .. image:: https://codecov.io/gh/abdullahselek/koolsla/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/abdullahselek/koolsla
 
