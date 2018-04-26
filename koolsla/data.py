@@ -105,3 +105,16 @@ def list_of_dishes(length):
                       color=yellow)
         return length
     return 0
+
+def search_dish(dish_id):
+    # Check whether the dish id is valid
+    if validate_dish_id(dish_id):
+        # Search dish title by id
+        data = import_data()
+        dataset = split_data(data)
+        # Display the search result
+        print_dish(name=dataset['names'][dish_id],
+                   dish_id=dish_id,
+                   color=yellow)
+        return dataset['names'][dish_id]
+    return None

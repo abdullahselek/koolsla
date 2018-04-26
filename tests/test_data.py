@@ -33,3 +33,8 @@ class DataTest(unittest.TestCase):
         self.assertEqual(data.list_of_dishes(0), 0)
         self.assertEqual(data.list_of_dishes(424509), 0)
         self.assertEqual(data.list_of_dishes(100), 100)
+
+    def test_search_dish(self):
+        self.assertIsNone(data.search_dish(-1), True)
+        self.assertIsNone(data.search_dish(424509), True)
+        self.assertEqual(data.search_dish(100), "Bananas")
