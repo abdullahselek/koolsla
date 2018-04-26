@@ -4,5 +4,3 @@ click
 colorama
 scikit_learn
 scipy
-flake8
-yapf
