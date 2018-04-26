@@ -45,7 +45,7 @@ def split_data(dish_dataset):
 def validate_dish_id(dish_id):
     """Validates dish id.
     Args:
-      dish_id (int): Path of dataset file.
+      dish_id (int): Dish id.
     Returns:
       is_valid (bool): True / False.
     """
@@ -107,6 +107,13 @@ def list_of_dishes(length):
     return 0
 
 def search_dish(dish_id):
+    """Prints the single dish name with given id.
+    Args:
+      dish_id (int): Dish id.
+    Returns:
+      Dish name or None.
+    """
+
     # Check whether the dish id is valid
     if validate_dish_id(dish_id):
         # Search dish title by id
