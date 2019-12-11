@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # koolsla documentation build configuration file, created by
 # sphinx-quickstart on Fri Mar  2 18:36:22 2018.
