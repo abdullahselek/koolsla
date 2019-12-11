@@ -3,6 +3,9 @@
 
 .. |logo| image:: https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=https://raw.githubusercontent.com/abdullahselek/koolsla/master/resources/logo.png&container=focus&resize_w=20&resize_h=20
 
+.. image:: https://github.com/abdullahselek/koolsla/workflows/koolsla%20ci/badge.svg
+    :target: https://github.com/abdullahselek/koolsla/actions
+
 .. image:: https://img.shields.io/pypi/v/koolsla.svg
     :target: https://pypi.python.org/pypi/koolsla/
 
