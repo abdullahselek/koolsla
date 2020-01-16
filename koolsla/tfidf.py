@@ -5,7 +5,10 @@ import time
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
-def train_engine(plots):
+from typing import List
+
+
+def train_engine(plots: List):
     """Train engine from dish names.
     Args:
       plots (array): List of dish names.
@@ -26,7 +29,8 @@ def train_engine(plots):
     # Pack and return the results
     return tfidf_matrix
 
-def find_similarities(tfidf_matrix, index, top_n=5):
+
+def find_similarities(tfidf_matrix: List, index: int, top_n: int = 5):
     """Use to find similarities.
     Args:
       tfidf_matrix (sparse matrix, [n_samples, n_features]): Tf-idf-weighted document-term matrix.
