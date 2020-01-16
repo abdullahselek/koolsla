@@ -13,7 +13,8 @@ green = 'green'
 yellow = 'yellow'
 blue = 'blue'
 
-def print_red(message):
+
+def print_red(message: str):
     """Print out red colored text.
     Args:
       message (str): Text.
@@ -21,7 +22,8 @@ def print_red(message):
 
     print(colored(message, red))
 
-def print_green(message):
+
+def print_green(message: str):
     """Print out green colored text.
     Args:
       message (str): Text.
@@ -29,7 +31,8 @@ def print_green(message):
 
     print(colored(message, green))
 
-def print_yellow(message):
+
+def print_yellow(message: str):
     """Print out yellow colored text.
     Args:
       message (str): Text.
@@ -38,7 +41,7 @@ def print_yellow(message):
     print(colored(message, yellow))
 
 
-def print_blue(message):
+def print_blue(message: str):
     """Print out blue colored text.
     Args:
       message (str): Text.
@@ -46,11 +49,13 @@ def print_blue(message):
 
     print(colored(message, blue))
   
-def print_dish(name, dish_id, color):
+
+def print_dish(name: str, dish_id: int, color: str):
     """Print out dish name and id with given color.
     Args:
       name (str): Dish name.
       dish_id (int): ID.
+      color (str): Color name.
     """
 
     print(colored('* Name : ' + name + ' - ID : ' + str(dish_id), color))
