@@ -17,6 +17,7 @@ class TfIdfTest(unittest.TestCase):
         tfidf_matrix = tfidf.train_engine(split_data['names'])
         self.assertIsNotNone(tfidf_matrix)
 
+
     def test_find_similarities(self):
         dish_dataset = data.import_data(data.dish_dataset_path)
         split_data = data.split_data(dish_dataset)
