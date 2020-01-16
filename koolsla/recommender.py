@@ -4,7 +4,8 @@ from koolsla import data
 from koolsla import tfidf
 from koolsla import color_print
 
-def recommend(dish_id, recommendation_count=5):
+
+def recommend(dish_id: int, recommendation_count: int = 5):
     """Recommends similar dishes.
     Args:
       dish_id (int): Dish id which koolsla recommends similar ones.
