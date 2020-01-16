@@ -10,6 +10,8 @@ from .color_print import (
     print_dish,
     yellow
 )
+from typing import Dict
+
 
 # Parent directory
 parent_directory_path = dirname(__file__)
@@ -17,7 +19,8 @@ parent_directory_path = dirname(__file__)
 dish_dataset_path = join(parent_directory_path,
                           'dataset/dish.csv')
 
-def import_data(dataset_path=dish_dataset_path):
+
+def import_data(dataset_path: str = dish_dataset_path):
     """Imports dataset.
     Args:
       dataset_path (str): Path of dataset file.
@@ -28,10 +31,11 @@ def import_data(dataset_path=dish_dataset_path):
     dish_dataset = pandas.read_csv(dataset_path)
     return dish_dataset
 
-def split_data(dish_dataset):
+
+def split_data(dish_dataset: Dict):
     """Splits dataset.
     Args:
-      dish_dataset (dataset values): Dataset.
+      dish_dataset (Dict): Dataset.
     Returns:
       names (dictionary): Dish names in a dictionary.
     """
@@ -41,7 +45,8 @@ def split_data(dish_dataset):
     # Pack and return the split data
     return {'names': dish_names}
 
-def validate_dish_id(dish_id):
+
+def validate_dish_id(dish_id: int):
     """Validates dish id.
     Args:
       dish_id (int): Dish id.
@@ -55,7 +60,8 @@ def validate_dish_id(dish_id):
         return False
     return True
 
-def validate_max_recommendation(recommendation_count):
+
+def validate_max_recommendation(recommendation_count: int):
     """Validates dish id.
     Args:
       recommendation_count (int): Max recommendation count given by user.
@@ -72,7 +78,8 @@ def validate_max_recommendation(recommendation_count):
         return False
     return True
 
-def validate_length(length):
+
+def validate_length(length: int):
     """Validates given length.
     Args:
       length (int): Length to display dishes.
@@ -87,7 +94,7 @@ def validate_length(length):
     print_red('Input is not a valid integer between [1, 424508]')
     return False
 
-def list_of_dishes(length):
+def list_of_dishes(length: int):
     """List the dishes with given length.
     Args:
       length (int): Length to display dishes.
@@ -105,7 +112,7 @@ def list_of_dishes(length):
         return length
     return 0
 
-def search_dish(dish_id):
+def search_dish(dish_id: int):
     """Prints the single dish name with given id.
     Args:
       dish_id (int): Dish id.
