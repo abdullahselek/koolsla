@@ -1,0 +1,56 @@
+site_name: koolsla
+site_description: Food recommendation tool with Machine learning.
+site_url: https://koolsla.abdullahselek.com/
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: amber
+  favicon: images/favicon.png
+  language: en
+repo_name: abdullahselek/koolsla
+repo_url: https://github.com/abdullahselek/koolsla
+edit_uri: ''
+nav:
+- koolsla: index.md
+- installation.md
+- Module Documentation:
+  - module/color_print.md
+  - module/data.md
+  - module/recommender.md
+  - module/tfidf.md
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+      watch:
+        - koolsla
+markdown_extensions:
+- toc:
+    permalink: true
+- markdown.extensions.codehilite:
+    guess_lang: false
+- markdown_include.include:
+    base_path: docs
+- admonition
+- codehilite
+- extra
+extra:
+  social:
+  - icon: fontawesome/brands/github-alt
+    link: https://github.com/abdullahselek
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/abdullahselek
+  - icon: fontawesome/solid/globe
+    link: https://abdullahselek.com
+extra_css:
+- css/termynal.css
+- css/custom.css
+extra_javascript:
+- https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js
+- js/termynal.js
+- js/custom.js
