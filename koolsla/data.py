@@ -20,7 +20,7 @@ dish_dataset_path = join(parent_directory_path,
                           'dataset/dish.csv')
 
 
-def import_data(dataset_path: str = dish_dataset_path):
+def import_data(dataset_path: str = dish_dataset_path) -> pandas.core.frame.DataFrame:
     """Imports dataset.
     Args:
       dataset_path (str): Path of dataset file.
@@ -32,7 +32,7 @@ def import_data(dataset_path: str = dish_dataset_path):
     return dish_dataset
 
 
-def split_data(dish_dataset: Dict):
+def split_data(dish_dataset: Dict) -> Dict:
     """Splits dataset.
     Args:
       dish_dataset (Dict): Dataset.
@@ -46,7 +46,7 @@ def split_data(dish_dataset: Dict):
     return {'names': dish_names}
 
 
-def validate_dish_id(dish_id: int):
+def validate_dish_id(dish_id: int) -> bool:
     """Validates dish id.
     Args:
       dish_id (int): Dish id.
@@ -61,7 +61,7 @@ def validate_dish_id(dish_id: int):
     return True
 
 
-def validate_max_recommendation(recommendation_count: int):
+def validate_max_recommendation(recommendation_count: int) -> bool:
     """Validates dish id.
     Args:
       recommendation_count (int): Max recommendation count given by user.
@@ -79,7 +79,7 @@ def validate_max_recommendation(recommendation_count: int):
     return True
 
 
-def validate_length(length: int):
+def validate_length(length: int) -> bool:
     """Validates given length.
     Args:
       length (int): Length to display dishes.
@@ -94,10 +94,12 @@ def validate_length(length: int):
     print_red('Input is not a valid integer between [1, 424508]')
     return False
 
-def list_of_dishes(length: int):
+def list_of_dishes(length: int) -> int:
     """List the dishes with given length.
     Args:
       length (int): Length to display dishes.
+    Returns:
+      length (int): Validated length of dishes to display.
     """
 
     # Check whether the input length is valid
@@ -112,7 +114,7 @@ def list_of_dishes(length: int):
         return length
     return 0
 
-def search_dish(dish_id: int):
+def search_dish(dish_id: int) -> str:
     """Prints the single dish name with given id.
     Args:
       dish_id (int): Dish id.
