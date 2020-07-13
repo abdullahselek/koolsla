@@ -30,7 +30,7 @@ def train_engine(plots: List):
     return tfidf_matrix
 
 
-def find_similarities(tfidf_matrix: List, index: int, top_n: int = 5):
+def find_similarities(tfidf_matrix: List, index: int, top_n: int = 5) -> dict:
     """Use to find similarities.
     Args:
       tfidf_matrix (sparse matrix, [n_samples, n_features]): Tf-idf-weighted document-term matrix.
