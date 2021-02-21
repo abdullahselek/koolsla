@@ -45,7 +45,6 @@ setup(
     include_package_data=True,
     platforms=['Any'],
     install_requires=requirements,
-    setup_requires=['pytest-runner'],
     tests_require=requirements_testing,
     python_requires='>=3.5',
     keywords='machine learning, food suggestion, tf-idf, cosine similarity',
